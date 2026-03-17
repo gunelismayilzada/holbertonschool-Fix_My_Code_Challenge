@@ -10,7 +10,7 @@ ARGV.each do |arg|
     next if arg !~ /^-?[0-9]+$/
     # convert to integer
     i_arg = arg.to_i
-    # insert result at the right position
+    # insert result
     result << i_arg
 end
 
@@ -19,7 +19,7 @@ loop do
     swapped = false
 
     (n-1).times do |i|
-        if result[i] < result[i+1]
+        if result[i] > result[i+1]   # düzəliş burada
             result[i], result[i+1] = result[i+1], result[i]
             swapped = true
         end
